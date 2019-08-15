@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>webapp</td>
+              <td>1</td>
+            <td>16 Aug 2019, 00:54</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">Close.quit_the_webdriver()</td>
+              <td>1</td>
+              <td class="duration" data-value="837786200">0.837</td>
+              <td class="duration" data-value="837786200">0.837</td>
+              <td class="duration" data-value="837786200">0.837</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomePageSteps.a_validation_error_message_something_is_displayed(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="74165900">0.074</td>
+              <td class="duration" data-value="74165900">0.096</td>
+              <td class="duration" data-value="148331800">0.148</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomePageSteps.i_click_on_find_a_better_deal_button()</td>
+              <td>3</td>
+              <td class="duration" data-value="207397000">0.207</td>
+              <td class="duration" data-value="207397000">0.363</td>
+              <td class="duration" data-value="622191000">0.622</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomePageSteps.i_navigate_to_the_web_application_url()</td>
+              <td>1</td>
+              <td class="duration" data-value="2808512100">2.808</td>
+              <td class="duration" data-value="2808512100">2.808</td>
+              <td class="duration" data-value="2808512100">2.808</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomePageSteps.the_main_header_of_the_page_is_compare_gas_electricity(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="120154000">0.120</td>
+              <td class="duration" data-value="120154000">0.120</td>
+              <td class="duration" data-value="120154000">0.120</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomePageSteps.the_page_loading_is_complete()</td>
+              <td>1</td>
+              <td class="duration" data-value="27859000">0.027</td>
+              <td class="duration" data-value="27859000">0.027</td>
+              <td class="duration" data-value="27859000">0.027</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomePageSteps.the_postcode_and_email_text_entry_fields_are_not_populated()</td>
+              <td>1</td>
+              <td class="duration" data-value="1176356000">1.176</td>
+              <td class="duration" data-value="1176356000">1.176</td>
+              <td class="duration" data-value="1176356000">1.176</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomePageSteps.the_postcode_text_entry_field_is_populated_with_the_text_something(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1553385900">1.553</td>
+              <td class="duration" data-value="1553385900">1.736</td>
+              <td class="duration" data-value="3106771800">3.106</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Initial.initialize_the_webdriver()</td>
+              <td>1</td>
+              <td class="duration" data-value="10557541500">10.557</td>
+              <td class="duration" data-value="10557541500">10.557</td>
+              <td class="duration" data-value="10557541500">10.557</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SearchPageSteps.the_heading_text_something_is_present(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="68608000">0.068</td>
+              <td class="duration" data-value="68608000">0.068</td>
+              <td class="duration" data-value="68608000">0.068</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SearchPageSteps.the_user_is_taken_to_a_new_search_page_with_the_following_url()</td>
+              <td>1</td>
+              <td class="duration" data-value="577010500">0.577</td>
+              <td class="duration" data-value="577010500">0.577</td>
+              <td class="duration" data-value="577010500">0.577</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>11</td>
+            <td>15</td>
+            <td class="duration">1.336</td>
+            <td class="duration">10.557</td>
+            <td class="duration">20.051</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

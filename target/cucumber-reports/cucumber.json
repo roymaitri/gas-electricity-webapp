@@ -1,0 +1,288 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "navigate to the homepage",
+        "description": "",
+        "id": "homepage;navigate-to-the-homepage",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10557541500,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Initialize the webdriver",
+            "match": {
+              "location": "Initial.initialize_the_webdriver()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2808512100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I navigate to the Web application URL",
+            "match": {
+              "location": "HomePageSteps.i_navigate_to_the_web_application_url()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "verify header of the homepage",
+        "description": "",
+        "id": "homepage;verify-header-of-the-homepage",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 27859000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the page loading is complete",
+            "match": {
+              "location": "HomePageSteps.the_page_loading_is_complete()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 120154000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the main header of the page is \"COMPARE GAS \u0026 ELECTRICITY\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "COMPARE GAS \u0026 ELECTRICITY",
+                  "offset": 32
+                }
+              ],
+              "location": "HomePageSteps.the_main_header_of_the_page_is_compare_gas_electricity(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 11,
+        "name": "verify empty postcode error message",
+        "description": "",
+        "id": "homepage;verify-empty-postcode-error-message",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1176356000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the Postcode and Email text entry fields are not populated",
+            "match": {
+              "location": "HomePageSteps.the_postcode_and_email_text_entry_fields_are_not_populated()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 363592700,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I Click on FIND A BETTER DEAL button",
+            "match": {
+              "location": "HomePageSteps.i_click_on_find_a_better_deal_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 96719000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "a validation error message: \"Please provide your postcode, as different regions have different fuel prices\" is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Please provide your postcode, as different regions have different fuel prices",
+                  "offset": 29
+                }
+              ],
+              "location": "HomePageSteps.a_validation_error_message_something_is_displayed(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 16,
+        "name": "verify invalid postcode error message",
+        "description": "",
+        "id": "homepage;verify-invalid-postcode-error-message",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1736595400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the Postcode text entry field is populated with the text \"W30PN#\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "W30PN#",
+                  "offset": 58
+                }
+              ],
+              "location": "HomePageSteps.the_postcode_text_entry_field_is_populated_with_the_text_something(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 151009300,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I Click on FIND A BETTER DEAL button",
+            "match": {
+              "location": "HomePageSteps.i_click_on_find_a_better_deal_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 51612800,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "a validation error message: \"Please provide a valid UK postcode\" is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Please provide a valid UK postcode",
+                  "offset": 29
+                }
+              ],
+              "location": "HomePageSteps.a_validation_error_message_something_is_displayed(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 21,
+        "name": "verify valid postcode journey",
+        "description": "",
+        "id": "homepage;verify-valid-postcode-journey",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1370176400,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the Postcode text entry field is populated with the text \"W30PN\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "W30PN",
+                  "offset": 58
+                }
+              ],
+              "location": "HomePageSteps.the_postcode_text_entry_field_is_populated_with_the_text_something(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 107589000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I Click on FIND A BETTER DEAL button",
+            "match": {
+              "location": "HomePageSteps.i_click_on_find_a_better_deal_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 577010500,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user is taken to a new search page with the following URL",
+            "match": {
+              "location": "SearchPageSteps.the_user_is_taken_to_a_new_search_page_with_the_following_url()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 68608000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the Heading text \"START YOUR SEARCH\" is present",
+            "match": {
+              "arguments": [
+                {
+                  "val": "START YOUR SEARCH",
+                  "offset": 18
+                }
+              ],
+              "location": "SearchPageSteps.the_heading_text_something_is_present(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 28,
+        "name": "Quit WebDriver",
+        "description": "",
+        "id": "homepage;quit-webdriver",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 837786200,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "Quit the webdriver",
+            "match": {
+              "location": "Close.quit_the_webdriver()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "HomePage",
+    "description": "",
+    "id": "homepage",
+    "keyword": "Feature",
+    "uri": "src/test/java/assignment/runpath/webapp/features/HomePage.feature"
+  }
+]
